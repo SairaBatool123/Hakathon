@@ -18,6 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Revolution&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Staatliches&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -71,7 +72,7 @@
     </nav>
     <div class="container-fluid">
         <div class="row banner rounded-5 justify-content-center mt-5 ">
-            <a href="www.google.com">See Coranu Tutorial</a>
+            <a href="https://www.google.com">See Coranu Tutorial</a>
                 <h1 class="display-4 fw-bold text-black ">Insights from our team</h1>
                 <p>Powerful Trading Tools and Features fr Experienced Investors</p>
                 
@@ -84,15 +85,35 @@
     </div>
     
  
+    <div class="container">
+      <h3>Category Filter</h3>
+      <select id="category-select">
+        <option value="all">All</option>
+        <option value="electronics">Programming</option>
+        <option value="furniture">Web</option>
+        <option value="clothing">3D Animation</option>
+      </select>
+      <button id="filter-btn" class="w-100">Filter</button>
+      <div id="results"></div>
+    </div>
+</div>
+<div>
+<h4 class="text-primary display-4 mb-3 mt-5">Trending Topics</h4>
+<div class="mb-5"><button class="btn btn-white rounded-5 w-25 me-5 btn-outline-secondary">Web</button>
+  <button class="btn btn-white rounded-5 w-25  me-5 btn-outline-secondary">Programming</button><button class="btn btn-white rounded-5 w-25 btn-outline-secondary">3D Animation</button></div>
+</div>
 
 
-<!-------------------- Title AND Content --------------------->
-<h1 class="display-5 fs-5 ms-4 text-primary">Blog Publish</h1>
-<div class="container-fluid">
+    <div id="allPost" class="col-lg-10 col-md-10 cardIs">
+      <h4 class="text-primary display-4 mb-3 mt-5">Review Blog</h4>
+    </div>
+    <!-------------------- Title AND Content --------------------->
+<h4 class="text-primary display-4 mb-3 mt-5 text-center">Blog Publish</h4>
+<div class="container-fluid me-5">
     <div class="row">
-      <div class="p-4 col-lg-6 col-md-6">
+      <div class="p-4 col-lg-12 col-md-8">
         <div class="card p-2">
-          <div class="mb-3">
+          <div class="mb-3 d-flex gap-5 mt-3 p-2">
             <!-- Radio Button Group --> 
    <div class="form-check">
       <input class="form-check-input" type="radio" name="exampleRadio" id="radio1" value="Option 1">
@@ -106,8 +127,9 @@
       <input class="form-check-input" type="radio" name="exampleRadio" id="radio3" value="Option 3">
       <label class="form-check-label" for="radio3">3D Animation</label>
     </div>
-    <button class="btn btn-primary mt-3" onclick="getSelectedRadio()">Get Selected</button>
-  </div> 
+  
+    <button class="btn btn-primary mb-3 w-25" onclick="getSelectedRadio()">Selected</button>
+  </div>
 
           <!-- <div>  
             <label for="exampleFormControlInput1" class="form-label active"
@@ -139,27 +161,12 @@
               rows="3"
             ></textarea>
         <div class="mt-3">
-        <button id="Add" class="btn btn-primary w-25 postBtn">Add</button>
-        
+        <button id="Add" class="btn btn-primary w-25 postBtn w-100">Add</button>
         <!-- <button onclick="post()" class="btn btn-primary w-25 postBtn">Post</button> -->
-        </div>
+      </div>
     </div>
-    </div>
+  </div>
 </div>
-<div>
-<h4 class="text-primary display-4 mb-3">Trending Topics</h4>
-<div class="mb-5"><button class="btn btn-white rounded-5 w-25 me-5 btn-outline-secondary">Web</button>
-  <button class="btn btn-white rounded-5 w-25  me-5 btn-outline-secondary">Programming</button><button class="btn btn-white rounded-5 w-25 btn-outline-secondary">3D Animation</button></div>
-</div>
-
-
-    <div id="allPost" class=" col-lg-10 col-md-10">
-      <br>
-      <h1 class="display-5 fs-5 text-dark">Review Blog</h1>
-    </div>
-
-
-      <div class="main"></div>
       <!-- subscribe -->
       <div class="container">
         <div class="col-sm-12 col-md-12 col-lg-12">
@@ -181,7 +188,7 @@
                         aria-describedby="emailHelp"
                       />
                     </label>
-                    <a href="#" class="btn btn-primary subs">Subscribe</a>
+                    <a href="#" class="btn btn-primary">Subscribe</a>
                   </form>
                 </div>
             </div>

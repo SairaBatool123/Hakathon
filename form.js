@@ -65,7 +65,7 @@ let signIn = () => {
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       // ---------------------- loaction ---------------------
-      // window.location.href = "www.google.com";
+      window.location.href = "./index.html";
       const user = userCredential.user;
       Toastify({
         text: `Login Successfully ✅`,
@@ -95,7 +95,7 @@ onAuthStateChanged(auth, (user) => {
   if (user) {
     const uid = user.uid;
     console.log(uid, "Already logged In");
-    // window.location.href = "./dashboard.html"
+    // window.location.href = "./index.html"
   } else {
     console.log("No User Here");
   }
